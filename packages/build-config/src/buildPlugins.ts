@@ -15,7 +15,8 @@ export function buildPlugins({ mode, paths, analyzer, platform }: BuildOptions):
   const plugins: Configuration['plugins'] = [
     new HtmlWebpackPlugin({
       template: paths.html,
-      favicon: path.resolve(paths.public, 'favicon.ico')
+      favicon: path.resolve(paths.public, 'favicon.ico'),
+      publicPath: '/'
     }),
     // Подменяет глобальные переменные, которые мы используем в коде на те значения,
     // котоые мы задаем на этапе сборки. Полезно, чтобы не попадал лишний код в сборку.
