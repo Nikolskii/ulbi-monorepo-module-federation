@@ -83,7 +83,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
   //   }
   // };
 
-  const babelLoader = buildBabelLoader(options);
+  // const babelLoader = buildBabelLoader(options);
 
   return [
     // Порядок имеет значение
