@@ -1,6 +1,7 @@
-import { createBrowserRouter } from 'react-router-dom';
-import { App } from '@/components/App';
 import { Suspense } from 'react';
+import { createBrowserRouter } from 'react-router-dom';
+import { UserCard } from '@packages/shared/src/components/UserCard';
+import { App } from '@/components/App';
 import { Shop } from '@/pages/shop';
 
 const routes = [
@@ -20,7 +21,8 @@ const routes = [
         path: '/shop/second',
         element: (
           <Suspense fallback={'Loading...'}>
-            <div>Second</div>
+            <h2>Second page</h2>
+            <UserCard username={'from shop...'} />
           </Suspense>
         )
       }
