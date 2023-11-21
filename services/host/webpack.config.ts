@@ -9,7 +9,7 @@ interface EnvVariables {
   platform?: BuildPlatform;
   analyzer?: boolean;
   SHOP_REMOTE_URL?: string;
-  ADMIN_REMOTE_URL?: string;
+  ABOUT_REMOTE_URL?: string;
 }
 
 export default (env: EnvVariables) => {
@@ -22,7 +22,7 @@ export default (env: EnvVariables) => {
   };
 
   const SHOP_REMOTE_URL = env.SHOP_REMOTE_URL ?? 'http://localhost:3001';
-  const ADMIN_REMOTE_URL = env.ADMIN_REMOTE_URL ?? 'http://localhost:3002';
+  const ABOUT_REMOTE_URL = env.ABOUT_REMOTE_URL ?? 'http://localhost:3002';
 
   const config: webpack.Configuration = buildWebpack({
     port: env.port ?? 3000,
@@ -37,13 +37,13 @@ export default (env: EnvVariables) => {
       name: 'host',
       filename: 'remoteEntry.js',
       // Путь до remote entry файлов, которые указаны в сервисах
-      // SHOP_REMOTE_URL и ADMIN_REMOTE_URL remote url, на котором крутится приложение. Например, localhost:3000 и localhost:3001
+      // SHOP_REMOTE_URL и ABOUT_REMOTE_URL remote url, на котором крутится приложение. Например, localhost:3000 и localhost:3001
       // В проде эти адреса одни, в деве - другие. Для динамического изменения принимаем, как env переменные
       //
       //
       remotes: {
         shop: `shop@${SHOP_REMOTE_URL}/remoteEntry.js`,
-        admin: `admin@${ADMIN_REMOTE_URL}/remoteEntry.js`
+        about: `about@${ABOUT_REMOTE_URL}/remoteEntry.js`
       },
       shared: {
         ...packageJson.dependencies,

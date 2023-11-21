@@ -29,7 +29,7 @@ export default (env: EnvVariables) => {
 
   config.plugins.push(new webpack.container.ModuleFederationPlugin({
     // Название микрофронтенда
-    name: 'admin',
+    name: 'about',
     // Название файла, который будет удаленно подключаться в host контейнер. По-умолчанию называют remoteEntry.js
     filename: 'remoteEntry.js',
     // Указываем, что хотим предоставить приложению-контейнеру

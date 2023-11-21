@@ -1,14 +1,14 @@
 import { Link, Outlet } from 'react-router-dom';
-import { adminRoutes } from '@packages/shared/src/routes/admin';
+import { aboutRoutes } from '@packages/shared/src/routes/about';
 import { shopRoutes } from '@packages/shared/src/routes/shop';
 
 export const App = () => {
   return (
     <div>
-      <h1>Page</h1>
-      <Link to={adminRoutes.about}>About</Link>
+      <h1>Host Page (app component)</h1>
+      <Link to={aboutRoutes.about}>Go to About</Link>
       <br />
-      <Link to={shopRoutes.main}>Shop</Link>
+      <Link to={shopRoutes.main}>Go to Shop</Link>
       <Outlet />
     </div>
   );

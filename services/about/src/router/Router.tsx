@@ -5,11 +5,11 @@ import { createBrowserRouter } from 'react-router-dom';
 
 const routes = [
   {
-    path: '/admin',
+    path: '/about',
     element: <App />,
     children: [
       {
-        path: '/admin/about',
+        path: '/about/main',
         element: (
           <Suspense fallback={'Loading...'}>
             <LazyAbout />

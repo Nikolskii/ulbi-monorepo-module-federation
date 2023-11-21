@@ -3,7 +3,7 @@ import { App } from '@/components/App';
 // @ts-ignore
 import shopRoutes from 'shop/Router';
 // @ts-ignore
-import adminRoutes from 'admin/Router';
+import aboutRoutes from 'about/Router';
 
 export const router = createBrowserRouter([
   {
@@ -11,7 +11,7 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       ...shopRoutes,
-      ...adminRoutes
+      ...aboutRoutes
     ]
   }
 ]);

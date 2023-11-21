@@ -22,7 +22,7 @@ const routes = [
         element: (
           <Suspense fallback={'Loading...'}>
             <h2>Second page</h2>
-            <UserCard username={'from shop...'} />
+            <UserCard username={'user from shop'} />
           </Suspense>
         )
       }

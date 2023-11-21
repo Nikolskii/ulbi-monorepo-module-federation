@@ -7,9 +7,9 @@ export const App = () => {
 
   return (
     <div>
-      <h1>ADMIN MODULE</h1>
+      <h1>Micro-frontend "About" (app component)</h1>
       <Outlet />
-      <UserCard username={'from admin...'} />
+      <UserCard username={'user from "about"'} />
     </div>
   );
 };
